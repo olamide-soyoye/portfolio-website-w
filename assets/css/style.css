@@ -147,7 +147,9 @@ p {
   -moz-box-shadow: 0px 5px 8px 0px rgb(78, 105, 186);
   box-shadow: 0px 5px 8px 0px rgb(78, 105, 186);
   background-color: #203d97;
-  text-transform: uppercase; }
+  text-transform: uppercase; 
+  margin-bottom: 50px;
+}
   .main-btn:hover {
     background-color: #fff;
     color: #203d97;
@@ -1784,4 +1786,63 @@ p.form-message.success, p.form-message.error {
 }
 .testimonial-font:hover{
   color: #ffffff !important;
+}
+
+/* Define the blinking animation with color change */
+@keyframes blink {
+  0% {
+    background-color: #203d97;
+    color: #fff;
+    border-color: #203d97;
+    box-shadow: 0px 5px 8px 0px rgb(78, 105, 186);
+  }
+  50% {
+    background-color: #ff8800; /* Eye-catching orange */
+    color: #000; /* Black text for contrast with orange */
+    border-color: #ff8800;
+    box-shadow: 0px 5px 8px 0px rgba(255, 136, 0, 0.7);
+  }
+  100% {
+    background-color: #203d97;
+    color: #fff;
+    border-color: #203d97;
+    box-shadow: 0px 5px 8px 0px rgb(78, 105, 186);
+  }
+}
+
+/* Apply the animation to the blink class */
+.blink {
+  animation: blink 2s infinite;
+  /* Note: Using 2 seconds instead of 2 milliseconds */
+  /* 2 milliseconds would be too fast to see and potentially cause issues */
+}
+
+/* For a more attention-grabbing effect with color change */
+@keyframes blink-intense {
+  0% {
+    background-color: #203d97;
+    color: #fff;
+    transform: scale(1);
+    border-color: #203d97;
+    box-shadow: 0px 5px 8px 0px rgb(78, 105, 186);
+  }
+  50% {
+    background-color: #ff8800; /* Eye-catching orange */
+    color: #000; /* Black text for contrast with orange */
+    transform: scale(1.05);
+    border-color: #ff8800;
+    box-shadow: 0px 8px 15px 0px rgba(255, 136, 0, 0.7);
+  }
+  100% {
+    background-color: #203d97;
+    color: #fff;
+    transform: scale(1);
+    border-color: #203d97;
+    box-shadow: 0px 5px 8px 0px rgb(78, 105, 186);
+  }
+}
+
+/* Alternative more intense blinking class */
+.blink-intense {
+  animation: blink-intense 1s infinite;
 }
